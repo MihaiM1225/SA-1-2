@@ -6,9 +6,11 @@ import org.example.Utils.OrderMapper;
 import org.example.dto.OrderDTO;
 import org.example.notification.NotificationService;
 import org.example.notification.Observer;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;

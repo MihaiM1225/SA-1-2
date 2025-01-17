@@ -1,14 +1,12 @@
 
 package org.example.handler;
 
+import lombok.Setter;
 import org.example.Entity.Order;
 
+@Setter
 public abstract class OrderValidationHandler {
     protected OrderValidationHandler next;
-
-    public void setNext(OrderValidationHandler next) {
-        this.next = next;
-    }
 
     public boolean validate(Order order) {
         if (next != null) {

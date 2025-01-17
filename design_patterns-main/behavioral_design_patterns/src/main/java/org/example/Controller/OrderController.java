@@ -7,6 +7,7 @@ import org.example.Utils.OrderMapper;
 import org.example.command.PlaceOrderCommand;
 import org.example.command.UpdateOrderCommand;
 import org.example.dto.OrderDTO;
+import org.example.dto.OrderDTO2;
 import org.example.handler.InventoryCheckHandler;
 import org.example.handler.PaymentValidationHandler;
 import org.springframework.web.bind.annotation.*;
@@ -25,8 +26,8 @@ public class OrderController {
     }
 
     @GetMapping
-    public List<OrderDTO> getAllOrders() {
-        return orderService.findAll().stream().map(OrderMapper::toDTO).collect(Collectors.toList());
+    public List<OrderDTO2> getAllOrders() {
+        return orderService.findAll().stream().map(OrderMapper::toDTO2).collect(Collectors.toList());
     }
 
     @PostMapping
